@@ -27,5 +27,31 @@ into pipeline and batch on how they are used in grid workloads.
 
 % section related_work (end)
 
-\end{document}
+\section{Experiment setup} % (fold)
+\label{sec:experiment_setup}
 
+\subsection{Pure pipeline} % (fold)
+\label{sub:pure_pipeline}
+
+% subsection Pure pipeline (end)
+
+We create an $n$-wide set of independent pipeline of tasks.  Each pipeline has
+two job.  The first jobs will produce data that is to be consumed by the next
+process.  In the workflow, the first stage of the pipeline gets data from a
+single source and the second stage persists data to the same storage area.
+
+Each stage has a runtime of $\mu$~\second according to a normal distribution.
+Same goes to each second stage.  Uniform distribution is also used on the input
+file, intermediate data and output file.
+
+\subsection{Share data only} % (fold)
+\label{sub:shared_data_only}
+
+The other setup is where the input for each job of a stage is the same for that
+stage.  Some in the literature call this ``common data''.
+
+% subsection shared_data_only (end)
+
+% section experiment_setup (end)
+
+\end{document}
