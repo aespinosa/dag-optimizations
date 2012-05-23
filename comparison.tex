@@ -1,0 +1,31 @@
+\documentclass{article}
+
+\title{Comparison of data-aware scheduling and task clustering}
+
+\begin{document}
+
+\section{Introduction} % (fold)
+\label{sec:introduction}
+We compare workflow optimization techniques like task clustering to a data-aware
+scheduler.  Both approaches seek to reduce the overall makespan of a DAG
+workflow by reducing the amount of data movement in between jobs.
+
+% section introduction (end)
+
+\section{Related work} % (fold)
+\label{sec:related_work}
+
+Various work on task clustering.  Some people also call this process graph
+partitioning.  Pegasus \cite{Singh2008} team used level-based and user-specified
+task clustering schemes.  Their system assumes that the users know how to best
+partition their tasks well.  Tanaka and Tatebe \cite{Tanaka2012} used
+multi-constraint graph partitioning algorithms.  This technique was
+traditionally used for the domain decomposition of finite-element meshes.
+
+Data-aware scheduling people.  Thain et. al. \cite{Thain2003} defined datasets
+into pipeline and batch on how they are used in grid workloads.  
+
+% section related_work (end)
+
+\end{document}
+
