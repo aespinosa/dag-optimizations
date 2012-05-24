@@ -1,6 +1,9 @@
 \documentclass{article}
 
+\usepackage[binary]{SIunits}
+
 \title{Comparison of data-aware scheduling and task clustering}
+\author{Allan Espinosa}
 
 \begin{document}
 
@@ -22,13 +25,23 @@ partition their tasks well.  Tanaka and Tatebe \cite{Tanaka2012} used
 multi-constraint graph partitioning algorithms.  This technique was
 traditionally used for the domain decomposition of finite-element meshes.
 
-Data-aware scheduling people.  Thain et. al. \cite{Thain2003} defined datasets
+Data-aware scheduling people.  Thain et.al.\ \cite{Thain2003} defined datasets
 into pipeline and batch on how they are used in grid workloads.  
 
 % section related_work (end)
 
 \section{Experiment setup} % (fold)
 \label{sec:experiment_setup}
+
+With the two setups in the next sub section we run two scheduling schemes:
+data-aware scheduling defined by me.  And a DAG-optimized version of the
+pipeline ensemble.
+
+In the first stage, we schedule jobs in a first-come-first-serve fashion.  Then
+for the second stage, we schedule jobs on where the first job executed.  If
+there are no available processors, like the CPU still being busy, schedule it to
+the next processor and move the data.  We use the  ``max-cache-hit'' dispatch
+policy describe in \cite{Raicu2008a}.
 
 \subsection{Pure pipeline} % (fold)
 \label{sub:pure_pipeline}
