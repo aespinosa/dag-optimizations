@@ -43,6 +43,10 @@ there are no available processors, like the CPU still being busy, schedule it to
 the next processor and move the data.  We use the  ``max-cache-hit'' dispatch
 policy describe in \cite{Raicu2008a}.
 
+For our resources, we have a central storage where the input data will come from
+and two compute clusters each with its own file system.  The two clusters are
+connected by a backbone link with the central storage.
+
 \subsection{Pure pipeline} % (fold)
 \label{sub:pure_pipeline}
 
