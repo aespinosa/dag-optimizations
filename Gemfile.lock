@@ -1,0 +1,29 @@
+GIT
+  remote: /home/aespinosa/tmp/simgrid-ruby/.git
+  revision: 814bebc788b68b96f2ea469cbd8e9281afedc227
+  branch: rvm
+  specs:
+    simgrid-ruby (1.0.0)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    builder (3.0.0)
+    cucumber (1.2.0)
+      builder (>= 2.1.2)
+      diff-lcs (>= 1.1.3)
+      gherkin (~> 2.10.0)
+      json (>= 1.4.6)
+    diff-lcs (1.1.3)
+    gherkin (2.10.0)
+      json (>= 1.4.6)
+    json (1.7.3)
+    rsruby (0.5.1.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  cucumber
+  rsruby
+  simgrid-ruby!
