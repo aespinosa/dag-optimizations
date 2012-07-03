@@ -9,6 +9,9 @@ class DagOptimization::Resource
   def available?(file)
     @files.include? file
   end
+
+  def submitted_jobs
+  end
 end
 
 

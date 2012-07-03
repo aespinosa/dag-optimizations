@@ -37,6 +37,6 @@ When /^The job is submitted to the scheduler$/ do
   scheduler.submit @job
 end
 
-Then /^It is run on the resource that has its input data$/ do
-  assert_equal resource, @job.ran_on
+Then /^It is submitted to the resource that has its input data$/ do
+  assert_equal @job, @resource.submitted_jobs
 end

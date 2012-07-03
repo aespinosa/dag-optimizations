@@ -5,8 +5,5 @@ module DagOptimization
     def initialize(input)
       @inputs = input
     end
-
-    def ran_on
-    end
   end
 end
