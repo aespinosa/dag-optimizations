@@ -6,7 +6,7 @@ Feature: Data-aware scheduler
     Given A job with an input dataset
     And Its input is available on a resource
     When The job is submitted to the scheduler
-    Then It is run on the resource with its input data
+    Then It is run on the resource that has its input data
 
   Scenario: Basic round-robin scheduler
     Given A uniform distribution of jobs
