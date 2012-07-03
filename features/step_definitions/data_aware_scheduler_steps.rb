@@ -1,12 +1,6 @@
 class DataSet
 end
 
-class Scheduler
-  def submit(job)
-    
-  end
-end
-
 def input
   @input ||= DataSet.new
 end
@@ -31,6 +25,12 @@ Given /^Its input is available on a resource$/ do
   resource.add_file input
 
   assert resource.available?(input), "#{input} not found in #{resource}"
+end
+
+Given /^The resource is managed by a scheduler$/ do
+  scheduler.manage_resource resource
+
+  assert_includes scheduler.resources, resource
 end
 
 When /^The job is submitted to the scheduler$/ do

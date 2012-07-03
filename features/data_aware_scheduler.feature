@@ -5,6 +5,7 @@ Feature: Data-aware scheduler
   Scenario: Job is scheduled where its data is available
     Given A job with an input dataset
     And Its input is available on a resource
+    And The resource is managed by a scheduler
     When The job is submitted to the scheduler
     Then It is submitted to the resource that has its input data
 
