@@ -1,13 +1,7 @@
-GIT
-  remote: /home/aespinosa/tmp/simgrid-ruby/.git
-  revision: 814bebc788b68b96f2ea469cbd8e9281afedc227
-  branch: rvm
-  specs:
-    simgrid-ruby (1.0.0)
-
 GEM
   remote: http://rubygems.org/
   specs:
+    ansi (1.4.3)
     builder (3.0.0)
     cucumber (1.2.0)
       builder (>= 2.1.2)
@@ -15,15 +9,36 @@ GEM
       gherkin (~> 2.10.0)
       json (>= 1.4.6)
     diff-lcs (1.1.3)
+    ffi (1.0.11)
     gherkin (2.10.0)
       json (>= 1.4.6)
+    guard (1.2.3)
+      listen (>= 0.4.2)
+      thor (>= 0.14.6)
+    guard-cucumber (1.2.0)
+      cucumber (>= 1.2.0)
+      guard (>= 1.1.0)
+    guard-minitest (0.5.0)
+      guard (>= 0.4)
     json (1.7.3)
-    rsruby (0.5.1.1)
+    listen (0.4.7)
+      rb-fchange (~> 0.0.5)
+      rb-fsevent (~> 0.9.1)
+      rb-inotify (~> 0.8.8)
+    rb-fchange (0.0.5)
+      ffi
+    rb-fsevent (0.9.1)
+    rb-inotify (0.8.8)
+      ffi (>= 0.5.0)
+    thor (0.15.4)
+    turn (0.9.6)
+      ansi
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   cucumber
-  rsruby
-  simgrid-ruby!
+  guard-cucumber
+  guard-minitest
+  turn

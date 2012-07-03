@@ -1,8 +1,8 @@
 source :rubygems
 
-gem "simgrid-ruby", git: "/home/aespinosa/tmp/simgrid-ruby/.git", branch: "rvm"
-gem "rsruby"
-
 group :test do
   gem "cucumber"
+  gem "guard-cucumber"
+  gem "guard-minitest"
+  gem "turn"
 end
