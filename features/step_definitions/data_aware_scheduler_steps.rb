@@ -12,11 +12,11 @@ def input
 end
 
 def scheduler
-  @scheduler = Scheduler.new
+  @scheduler ||= Scheduler.new
 end
 
 def resource
-  @resource = Resource.new
+  @resource ||= Resource.new
 end
 
 Given /^A job with an input dataset$/ do
@@ -28,7 +28,6 @@ Given /^A job with an input dataset$/ do
 end
 
 Given /^Its input is available on a resource$/ do
-  resource = Resource.new
   resource.add_file input
 
   assert resource.available?(input), "#{input} not found in #{resource}"
