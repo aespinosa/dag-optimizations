@@ -1,9 +1,7 @@
-require 'test/unit'
-require './lib/dag_optimization/job'
+require_relative '../test_helper'
 
 class JobTest
   class InputsContext < Test::Unit::TestCase
-    include DagOptimization
 
     def test_should_include_input_dataset
       input = Object.new
