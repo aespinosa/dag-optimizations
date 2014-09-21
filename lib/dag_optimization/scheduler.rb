@@ -3,6 +3,7 @@ class DagOptimization::Scheduler
   def initialize
     @resources = []
   end
+
   def submit(job)
     
   end

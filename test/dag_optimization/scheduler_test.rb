@@ -9,4 +9,15 @@ class SchedulerTest < Test::Unit::TestCase
 
     assert_includes scheduler.resources, resource
   end
+
+  def test_submit_sends_job_to_available_resource
+    scheduler = Scheduler.new
+    resource = Object.new
+    scheduler.manage_resource resource
+    job = Object.new
+
+    resource.expects(:submit).with(job)
+
+    scheduler.submit(job)
+  end
 end
